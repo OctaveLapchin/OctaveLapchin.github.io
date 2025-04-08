@@ -1,0 +1,22 @@
+{
+    "scripts": [
+      {
+        "nom": "Déplacer les ordinateurs d'une OU à une autre",
+        "langage": "PowerShell",
+        "description": "Ce script permet de déplacer les ordinateurs d'une unité organisationnelle (OU) à une autre dans Active Directory.",
+        "script": "Get-Content './postes.csv' | ForEach-Object {$nom, $str = ($_ -split ';')[0], ($_ -split ';')[1] -split '-' -replace '+', '0'; Get-ADComputer -Identity $nom | Move-ADObject -TargetPath (Get-ADOrganizationalUnit -Filter 'Name -eq '$($str[3])'').DistinguishedName }"
+      },
+      {
+        "nom": "Installer l'appli Pense Bête",
+        "langage" : "powershell",
+        "description": "# Cette commande permet l'installation du logiciel pense bête en powershell sous windows",
+        "script" : "Get-AppxPackage -allusers Microsoft.MicrosoftStickyNotes | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register \"$($_.InstallLocation)\\AppxManifest.xml\"}"
+      },
+      {
+        "nom":"Copy Fonction JS",
+        "langage": "javascript",
+        "description":"",
+        "script":"function copy(arg) {\nlet copyText = document.getElementById(arg);\n   if (copyText) {\n      const tempInput = document.createElement(\"textarea\");\n      tempInput.value = copyText.textContent || copyText.value;\n      document.body.appendChild(tempInput);\n      tempInput.select();\n      document.execCommand(\"copy\");\n      document.body.removeChild(tempInput);\n      console.log(\"Texte copié dans le presse-papiers !\");\n   } else {\n      console.error(\"Élément introuvable !\");\n   }\n}"
+      }
+    ]
+}

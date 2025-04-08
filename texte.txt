@@ -1,0 +1,33 @@
+1/ Présentation:
+- nom, prenom
+- entreprise
+- ecole
+- passions
+- certifications
+
+Le Projet:
+
+2/ Ticketing:
+- Les tickets basiques (Resolution de PB + Gestion des demandes)
+- SLA (System Level Agreement) -> TTO (Time to Own Ticket) & TTR (Time to Resolve Ticket)
+
+3/ Inventoring:
+- Gestion basique des utilisateurs et des ordinateurs
+- Importation des Portes (nomenclature à détailler)
+- Importation des Imprimantes (Fichier CSV -> Script powershell -> base de donnée GLPI)
+- Importation des machines grâce à SCCM (Présentation courte de SCCM)
+
+4/ Gestion de projet:
+- Un nom de projet, une date de début, une date de fin, un contenu qui peut être des tâches
+- Documentation de gestion de projet avec GLPI
+
+5/ DMZ accessible à tous les employés de l'hôpital
+- Grace au SLA bonne image du service informatique
+
+6/ Tableau de synthèse:
+- Présentation brève des points abordé à l'école et en entreprise en 1er et 2eme année
+
+7/ Veille Technologique:
+Pourquoi j'en fais: 
+- Car j'aime être informé des nouveautés
+- Ca me permet de découvrir des choses que je ne connais pas
