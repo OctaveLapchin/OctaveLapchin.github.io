@@ -6,7 +6,7 @@ function checkApacheStatus() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            alert(data.status);
+            // alert(data.status);
             if (data.status === "1") {window.location.href = url;}
         })
         .catch(error => {alert(data.message);});
