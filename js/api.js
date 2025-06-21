@@ -1,15 +1,18 @@
-function checkApacheStatus() {
-    token = atob("R1ZEUVVaNTY3ODohOzo7YnF1emQ=");
-    let url = "https://noctave.fr"
-    const apiUrl = url+'/api.php?status&token='+token;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            // alert(data.status);
-            if (data.status === "1") {window.location.href = url;}
-        })
-        .catch(error => {alert(data.message);});
+function checkApacheStatus(){
+    $.ajax({
+    type: "POST",
+    url: "https://noctave.fr/api/v1/service",
+    data: {
+        token: "GYVdbqiznd45678:!:;dqz",
+        service: "apache2"
+    },
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(xhr, status, error) {
+        console.error("Erreur lors de la requête:", error);
+    }
+});
 }
 
 checkApacheStatus();
